@@ -45,3 +45,12 @@ class Dico(dict):
         else:
             self.keys_array.append(key)
             self.values_array.append(value)
+
+    def sort(self):
+        old_key = self.keys_array.copy()
+        old_values = self.values_array.copy()
+        self.keys_array.sort()
+        i = 0
+        while i < len(self.keys_array):
+            self.values_array[i] = old_values[old_key.index(self.keys_array[i])]
+            i += 1
