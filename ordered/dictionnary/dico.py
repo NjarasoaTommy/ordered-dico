@@ -16,14 +16,3 @@ class Dico(dict):
             exit(0)
         print(self.keys_array)
         print(self.values_array)
-
-
-
-print("=============================================================")
-dic = {"matiere": "anglais", "prof": "Bertin"}
-d = Dico(dic)
-print("===================")
-d2 = Dico(nom="Koto", age=42)
-print("===================")
-d2 = Dico(dic, nom="Koto", age=42)
-print("=============================================================")
