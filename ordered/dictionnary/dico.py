@@ -37,3 +37,11 @@ class Dico(dict):
             i += 1
         s += '}'
         return s
+
+    def __setitem__(self, key, value):
+        if key in self.keys_array:
+            change_index = self.keys_array.index(key)
+            self.values_array[change_index] = value
+        else:
+            self.keys_array.append(key)
+            self.values_array.append(value)
