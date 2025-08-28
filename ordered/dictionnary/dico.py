@@ -30,6 +30,8 @@ class Dico(dict):
         self.length -= 1
 
     def __str__(self):
+        if len(self.keys_array) == 0:
+            return '{}'
         s =  '{ "' + str(self.keys_array[0]) + "\" : "
         if isinstance(self.values_array[0], str):
             s += "\"" + str(self.values_array[0]) + '"'
