@@ -10,3 +10,8 @@ print(fruits)
 print("========================================")
 fruits.sort()
 print(fruits)
+
+print("========================================")
+legumes = Dico(carotte = 26, haricot = 48)
+print(legumes)
+print(len(legumes))
