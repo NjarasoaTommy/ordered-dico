@@ -84,12 +84,10 @@ class Dico(dict):
         return ItKeys(self.keys_array)
     
     def keys(self):
-        for i in self.keys_array:
-            yield i
+        return self.keys_array
     
     def values(self):
-        for i in self.values_array:
-            yield i
+        return self.values_array
     
     def items(self):
         for i in range(len(self.keys_array)):
