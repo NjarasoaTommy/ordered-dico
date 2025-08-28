@@ -55,6 +55,12 @@ class Dico(dict):
         else:
             self.keys_array.append(key)
             self.values_array.append(value)
+    
+    def __getitem__(self, key):
+        if key in self.keys_array:
+            return self.values_array[self.keys_array.index(key)]
+        else:
+            return None
 
     def sort(self):
         old_key = self.keys_array.copy()
