@@ -17,8 +17,8 @@ class Dico(dict):
         else:
             print("Paramètre incorrect")
             exit(0)
-        print(self.keys_array)
-        print(self.values_array)
+        # print(self.keys_array)
+        # print(self.values_array)
 
     def __len__(self):
         return self.length
@@ -63,3 +63,16 @@ class Dico(dict):
         while i < len(self.keys_array):
             self.values_array[i] = old_values[old_key.index(self.keys_array[i])]
             i += 1
+
+    def __iter__(self):
+        return ItKeys(self.keys_array)
+
+class ItKeys():
+    def __init__(self, keys):
+        self.list_keys = keys
+        self.position = len(self.list_keys)
+    def __next__(self):
+        if self.position == 0:
+            raise StopIteration
+        self.position -= 1
+        return self.list_keys[self.position]
