@@ -20,3 +20,8 @@ print("========================================")
 legumes.reverse()
 fruits = fruits + legumes
 print(fruits)
+
+print("========================================")
+del fruits['haricot']
+print('haricot' in fruits)
+print(legumes['haricot'])
