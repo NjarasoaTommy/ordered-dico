@@ -30,10 +30,18 @@ class Dico(dict):
         self.length -= 1
 
     def __str__(self):
-        s =  '{ "' + str(self.keys_array[0]) + "\" : \"" + str(self.values_array[0]) + '"'
+        s =  '{ "' + str(self.keys_array[0]) + "\" : "
+        if isinstance(self.values_array[0], str):
+            s += "\"" + str(self.values_array[0]) + '"'
+        else:
+            s += str(self.values_array[0])
         i = 1
         while i < len(self.keys_array):
-            s +=  ", \"" + str(self.keys_array[i]) + "\" : \"" + str(self.values_array[i]) + '"'
+            s +=  ", \"" + str(self.keys_array[i]) + "\" : "
+            if isinstance(self.values_array[i], str):
+                s += "\"" + str(self.values_array[i]) + '"'
+            else:
+                s += str(self.values_array[i])
             i += 1
         s += ' }'
         return s
