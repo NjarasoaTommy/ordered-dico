@@ -15,3 +15,8 @@ print("========================================")
 legumes = Dico(carotte = 26, haricot = 48)
 print(legumes)
 print(len(legumes))
+
+print("========================================")
+legumes.reverse()
+fruits = fruits + legumes
+print(fruits)
