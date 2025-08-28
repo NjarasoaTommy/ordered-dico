@@ -1,7 +1,16 @@
 class Dico:
-    def __init__(self):
+    def __init__(self, base={}, **donnees):
         self._cles = []
         self._valeurs = []
+
+        if type(base) not in (dict, Dico):
+            raise TypeError("le type attendu est un dictionnaire (usuel ou ordonné)")
+        
+        for cle in base:
+            self[cle] = base[cle]
+
+        for cle in donnees:
+            self[cle] = donnees[cle]
 
     def __setitem__(self, key, value):
         if key in self._cles:
@@ -35,11 +44,8 @@ class Dico:
     def __contains__(self, key):
         return key in self._cles
 
-d = Dico()
-d["nom"] = "TOM"
-d["age"] = 12
-d["sexe"] = 'Homme'
-d["nom"] = "Blaise"
+dic = {"nom": "Toky", "poste": "Attaquant"}
+d = Dico(dic)
 print(d)
 print(d._cles)
 print(d._valeurs)
