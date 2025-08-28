@@ -66,6 +66,10 @@ class Dico(dict):
 
     def __iter__(self):
         return ItKeys(self.keys_array)
+    
+    def keys(self):
+        for i in self.keys_array:
+            yield i
 
 class ItKeys():
     def __init__(self, keys):

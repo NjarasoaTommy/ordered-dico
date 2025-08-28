@@ -16,3 +16,6 @@ it = iter(d)
 
 for k in d:
     print(k)
+print("=======================")
+for k in d.keys():
+    print(k)
