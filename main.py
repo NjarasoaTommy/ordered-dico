@@ -14,8 +14,8 @@ it = iter(d)
 # print(next(it))
 # print(next(it))
 
-for k in d:
+for k in d.keys():
     print(k)
 print("=======================")
-for k in d.keys():
+for k in d.values():
     print(k)

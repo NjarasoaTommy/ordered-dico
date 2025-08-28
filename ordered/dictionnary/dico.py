@@ -70,6 +70,10 @@ class Dico(dict):
     def keys(self):
         for i in self.keys_array:
             yield i
+    
+    def values(self):
+        for i in self.values_array:
+            yield i
 
 class ItKeys():
     def __init__(self, keys):
