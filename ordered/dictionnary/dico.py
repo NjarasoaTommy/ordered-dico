@@ -92,6 +92,7 @@ class Dico(dict):
     def __add__(self, other_dic):
         self.keys_array.extend(list(other_dic.keys()))
         self.values_array.extend(list(other_dic.values()))
+        return self
 
 class ItKeys():
     def __init__(self, keys):
