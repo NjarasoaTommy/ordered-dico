@@ -79,6 +79,10 @@ class Dico(dict):
         for i in range(len(self.keys_array)):
             yield (self.keys_array[i], self.values_array[i])
 
+    def __add__(self, other_dic):
+        self.keys_array.extend(list(other_dic.keys()))
+        self.values_array.extend(list(other_dic.values()))
+
 class ItKeys():
     def __init__(self, keys):
         self.list_keys = keys
