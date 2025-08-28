@@ -74,6 +74,10 @@ class Dico(dict):
     def values(self):
         for i in self.values_array:
             yield i
+    
+    def items(self):
+        for i in range(len(self.keys_array)):
+            yield (self.keys_array[i], self.values_array[i])
 
 class ItKeys():
     def __init__(self, keys):
