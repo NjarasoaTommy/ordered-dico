@@ -30,12 +30,12 @@ class Dico(dict):
         self.length -= 1
 
     def __str__(self):
-        s =  '{' + str(self.keys_array[0]) + " : " + str(self.values_array[0])
+        s =  '{ "' + str(self.keys_array[0]) + "\" : \"" + str(self.values_array[0]) + '"'
         i = 1
         while i < len(self.keys_array):
-            s +=  ", " + str(self.keys_array[i]) + " : " + str(self.values_array[i])
+            s +=  ", \"" + str(self.keys_array[i]) + "\" : \"" + str(self.values_array[i]) + '"'
             i += 1
-        s += '}'
+        s += ' }'
         return s
 
     def __setitem__(self, key, value):
