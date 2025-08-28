@@ -6,3 +6,7 @@ fruits["poire"] = 34
 fruits["prune"] = 128
 fruits["melon"] = 15
 print(fruits)
+
+print("========================================")
+fruits.sort()
+print(fruits)
