@@ -31,6 +31,9 @@ class Dico:
     
     def __repr__(self):
         return self.__str__(self)
+    
+    def __contains__(self, key):
+        return key in self._cles
 
 d = Dico()
 d["nom"] = "TOM"
@@ -40,3 +43,7 @@ d["nom"] = "Blaise"
 print(d)
 print(d._cles)
 print(d._valeurs)
+
+print("=========================")
+print("nom" in d)
+print("sport" in d)
